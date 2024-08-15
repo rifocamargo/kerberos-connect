@@ -1,0 +1,18 @@
+server:
+    port: 8080
+app:
+    ad-domain: lecom-ad-01.lecom.local
+    ad-server: ldap://lecom.local
+    service-principal: ricardo.camargo
+    keytab-location: C:\temp\tomcat.keytab
+    ldap-search-base: 
+    ldap-search-filter: sAMAccountName={0}
+spring:
+  ldap:
+    urls: 
+      ldap://lecom.local
+    base: dc=lecom,dc=local
+    username: ricardo.camargo@lecom.local
+    password: L3c0m@2018
+    custom:
+      user-dn-patterns: sAMAccountName
